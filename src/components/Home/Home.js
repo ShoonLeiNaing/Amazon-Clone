@@ -10,29 +10,29 @@ function Home() {
                 <div className='home__row'>
                     <Product
                         title='Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. ' 
-                        price='999.99' rating={5}
+                        price={999.99} rating={5} id='1'
                         image='https://images-na.ssl-images-amazon.com/images/I/71xrgPIhjzL._AC_SX679_.jpg'
                     />
                     <Product
                         title='Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.'
-                        price='999.99' rating={3}
+                        price={999.99} rating={3} id='2'
                         image='https://images-na.ssl-images-amazon.com/images/I/71xrgPIhjzL._AC_SX679_.jpg'
                     />
                 </div>
                 <div className='home__row'>
                     <Product
                         title='Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. ' 
-                        price='999.99' rating={3}
+                        price={999.99} rating={3} id='3'
                         image='https://images-na.ssl-images-amazon.com/images/I/71xrgPIhjzL._AC_SX679_.jpg'
                     />
                     <Product
                         title='Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. ' 
-                        price='999.99' rating={4}
+                        price={999.99} rating={4} id='4'
                         image='https://images-na.ssl-images-amazon.com/images/I/71xrgPIhjzL._AC_SX679_.jpg'
                     />
                     <Product
                         title='Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.' 
-                        price='999.99' rating={2}
+                        price={999.99} rating={2} id='5'
                         image='https://images-na.ssl-images-amazon.com/images/I/71xrgPIhjzL._AC_SX679_.jpg'
                     />
 
@@ -40,7 +40,7 @@ function Home() {
                 <div className='home__row'>
                     <Product 
                         title='Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. ' 
-                        price='999.99' rating={1} 
+                        price='999.99' rating={1} id='6'
                         image='https://images-na.ssl-images-amazon.com/images/I/71xrgPIhjzL._AC_SX679_.jpg'
                     />
                 </div>
