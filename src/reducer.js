@@ -1,15 +1,31 @@
-export const initialState={
-    basket:[]
+export const initialState = {
+    basket: []
 }
 
-const reducer =(state,action)=>{
+const reducer = (state, action) => {
     console.log(action.type)
-    switch(action.type){
+    switch (action.type) {
         case 'ADD_TO_BASKET':
-            return{
+            return {
                 ...state,
-                basket: [...state.basket,action.item]
+                basket: [...state.basket, action.item]
             };
+        case 'REMOVE_FROM_BASKET':
+            const index= state.basket.findIndex((basketItem)=>
+                basketItem.id === action.id
+            );
+            
+            let newBasket=[...state.basket]
+            if(index>=0){
+                newBasket.splice(index,1)
+            }else{
+                console.warm('Item is not in the basket')
+            }
+            return {
+                ...state,
+                basket:newBasket
+            }
+            
         default:
             return state
     }
