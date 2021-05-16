@@ -1,15 +1,36 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import './Login.css'
-import {Link} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
+import {auth} from '../../firebase'
 
 function Login() {
+   
+    const history = useHistory()
     const[email,setEmail]=useState('')
     const[password,setPassword]=useState('')
+
+    
     const signIn =(e)=>{
         e.preventDefault()
+        auth.signInWithEmailAndPassword(email,password)
+        .then((auth)=>{
+            history.push('/')
+        })
+        .catch((error)=>{
+            alert(error)
+        })
     }
     const register =(e)=>{
         e.preventDefault()
+        auth.createUserWithEmailAndPassword(email,password)
+        .then((auth)=>{
+            if(auth){
+                history.push('/')
+            }
+        })
+        .catch((error)=>{
+            alert(error)
+        })
     }
     return (
         <div className='login'>
