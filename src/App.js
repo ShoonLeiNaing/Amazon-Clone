@@ -7,6 +7,7 @@ import Login from './components/Login/Login';
 import { useEffect } from 'react';
 import {auth} from './firebase'
 import { useStateValue } from './StateProvider'
+import Payment from './components/Payment/Payment';
 
 function App() {
   
@@ -18,17 +19,6 @@ function App() {
           user:user
       })
     })   
-    // if(user){
-    //    dispatch({
-    //        type:'SET_USER',
-    //        user:user
-    //    })
-    // }else{
-    //    dispatch({
-    //        type:'SET_USER',
-    //        user:null
-    //    })
-    // }
    },[])
   return (
     <Router>
@@ -39,6 +29,9 @@ function App() {
       </Route>
       <Route path='/login'>
           <Login/>
+      </Route>
+      <Route path='/payment'>
+         <Payment/>
       </Route>
       <Route path='/' exact>
         <Header />
